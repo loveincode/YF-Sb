@@ -1,5 +1,7 @@
-package com.loveincode;
+package com.loveincode.impl;
 
+import com.loveincode.User;
+import com.loveincode.UserService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,5 +1,8 @@
 package com.loveincode.controller;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.loveincode.feign.GitHubClient;
 import com.loveincode.UserService;
 import com.loveincode.common.ResultDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,10 +20,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @Autowired
     UserService userService;
+    @Autowired
+    private GitHubClient gitHubClient;
+
+    private static final Gson GSON = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
 
     @GetMapping("hello")
     public ResultDTO list() {
-        return ResultDTO.ofSuccess("hello");
+        String value = gitHubClient.searchRepo("21");
+        return ResultDTO.ofSuccess(GSON.toJson(value));
+
     }
 
 }
