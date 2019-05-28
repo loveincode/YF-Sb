@@ -50,6 +50,12 @@
             <artifactId>logback-classic</artifactId>
         </dependency>
 
+        <!--spring状态机 -->
+        <dependency>
+            <groupId>org.springframework.statemachine</groupId>
+            <artifactId>spring-statemachine-starter</artifactId>
+        </dependency>
+
     </dependencies>
 
     <!--多模块打包：只需在启动类所在模块的POM文件：指定打包插件 -->
