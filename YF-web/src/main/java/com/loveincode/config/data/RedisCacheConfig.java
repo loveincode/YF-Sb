@@ -1,4 +1,4 @@
-package com.loveincode.config;
+package com.loveincode.config.data;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.Cache;

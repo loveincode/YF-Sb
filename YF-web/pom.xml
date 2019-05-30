@@ -56,6 +56,12 @@
             <artifactId>spring-statemachine-starter</artifactId>
         </dependency>
 
+        <!--&lt;!&ndash;spring批处理 &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-batch</artifactId>-->
+        <!--</dependency>-->
+
     </dependencies>
 
     <!--多模块打包：只需在启动类所在模块的POM文件：指定打包插件 -->

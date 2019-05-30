@@ -1,4 +1,4 @@
-package com.loveincode.config;
+package com.loveincode.config.statemachine;
 
 import com.loveincode.enums.EventsEnums;
 import com.loveincode.enums.StatusEnums;

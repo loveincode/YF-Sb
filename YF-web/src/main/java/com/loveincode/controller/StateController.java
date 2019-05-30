@@ -24,16 +24,16 @@ public class StateController {
     @ResponseBody
     public void testMachine() {
         stateMachine.start();
-        //stateMachine.sendEvent(EventsEnums.PAY);
-        //stateMachine.sendEvent(EventsEnums.RECEIVE);
+        //statemachine.sendEvent(EventsEnums.PAY);
+        //statemachine.sendEvent(EventsEnums.RECEIVE);
     }
 
     @RequestMapping("/testMachine2")
     @ResponseBody
     public void testMachine2() {
-        //stateMachine.start();
+        //statemachine.start();
         stateMachine.sendEvent(EventsEnums.PAY);
-        //stateMachine.sendEvent(EventsEnums.RECEIVE);
+        //statemachine.sendEvent(EventsEnums.RECEIVE);
     }
 
 }
