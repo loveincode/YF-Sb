@@ -73,6 +73,14 @@ public class ResultDTO<T> implements Serializable {
         return resultDto;
     }
 
+    public static ResultDTO ofFail(ResultCode resultEnum) {
+        ResultDTO resultDto = new ResultDTO();
+        resultDto.succ = false;
+        resultDto.code = resultEnum.getCode();
+        resultDto.msg = resultEnum.getMessage();
+        return resultDto;
+    }
+
     public ResultDTO() {
 
     }
