@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import com.loveincode.feign.GitHubClient;
 import com.loveincode.HelloService;
 import com.loveincode.common.ResultDTO;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,6 +29,7 @@ public class HelloController {
     private static final Gson GSON = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
 
     @GetMapping("word")
+    @ApiOperation("hello")
     public ResultDTO hello() {
         String value = gitHubClient.searchRepo("21");
         log.info("123");

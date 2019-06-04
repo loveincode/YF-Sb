@@ -1,5 +1,7 @@
 package com.loveincode.common;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -10,27 +12,33 @@ import java.io.Serializable;
  * com.loveincode
  */
 @Data
+@ApiModel("通用返回体")
 public class ResultDTO<T> implements Serializable {
     /**
      * 是否成功
      */
+    @ApiModelProperty("是否成功")
     private Boolean succ;
 
     /**
      * 服务器当前时间戳
      */
+    @ApiModelProperty("服务器当前时间戳")
     private Long ts = System.currentTimeMillis();
 
+    @ApiModelProperty("返回数据体")
     private T data;
 
     /**
      * 错误码
      */
+    @ApiModelProperty("错误码")
     private String code;
 
     /**
      * 错误描述
      */
+    @ApiModelProperty("错误描述")
     private String msg;
 
     public static ResultDTO ofSuccess() {
